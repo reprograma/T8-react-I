@@ -51,7 +51,7 @@ Em linhas gerais, há a necessidade de pensar toda a estrutura do software antes
 
 ## Setup - O que preciso para começar minha aplicação em React?
 
-Para o setup manual, vamos precisar de:
+Para o **setup manual**, vamos precisar de: **
 - Biblioteca React ([CDN](https://reactjs.org/docs/cdn-links.html));
 - Compilador ([Babel](https://babeljs.io/));
 - "Simulador" de servidor ([Live-server](https://www.npmjs.com/package/live-server)).
@@ -372,7 +372,7 @@ Caso tenha curiosidade, é possível ver todos os [eventos suportados no React](
 
 -----------
 
-## Ciclos de vida (lifecyle)
+## Ciclos de vida (lifecyle) **
 [Referência Documentação - Lifecycle](https://pt-br.reactjs.org/docs/react-component.html#component-life-cycle)
 
 Por padrão, o React deixa disponível alguns métodos que são acionados em momentos específicos da aplicação. Eles são separados em: montando (criação), atualizando (mudança) e desmontando (destruição).
@@ -388,7 +388,7 @@ Por padrão, o React deixa disponível alguns métodos que são acionados em mom
 **Desmontando**
 - componentWillUnmount(): aciona depois que o componente é destruido ou desmontado.
 
-![Diagrama de métodos de ciclo de vida, quando ocorrem e em que ordem. Diagrama completo pode ser visto no link a seguir.](https://blog.larapulse.com/files/original/images/09/19/0919a813a4bc70d8ef6a7928ba24bca7f3247496.png)
+![Diagrama de métodos de ciclo de vida, quando ocorrem e em que ordem. Diagrama completo pode ser visto no link a seguir.](https://i.imgur.com/y9EglFW.png)
 
 O diagrama interativo pode ser visto [neste link](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/).
 
