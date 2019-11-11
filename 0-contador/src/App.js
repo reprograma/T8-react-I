@@ -11,9 +11,37 @@ const verificaContador = () => {
   }
 }
 
+const Nav = props => {
+  return (
+    <div className="navContainer">
+      <p>{props.nome}</p>
+      <p>{props.titulo}</p>
+    </div>
+  )
+}
+
+const elemento = <p> Sou um elemento </p>;
+
 function App() {
   return (
     <div className="App">
+      <Nav
+        nome="mell"
+        titulo="titulo"
+        numero="13"
+      />
+
+      <Nav
+        nome="raissa"
+        titulo="titulo"
+      />
+
+      <Nav
+        nome="larissa"
+        titulo="titulo bacanudo"
+      />
+
+
       <h2>Contador</h2>
       <p>{contador}</p>
 

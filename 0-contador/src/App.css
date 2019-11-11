@@ -20,3 +20,12 @@
 .App-link {
   color: #09d3ac;
 }
+
+.navContainer {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
