@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+import Comentario from './componentes/Comentario';
+import Cat1 from './img/cat1.jpeg';
+import Cat2 from './img/cat2.webp'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Comentario
+        img={Cat1}
+        nome="Mell"
+        subtitulo="Ameeeeei, faiz mais"
+        comentario="nossa, babado esse video. Melhor youtuber"
+      />
+      <Comentario
+        img={Cat2}
+        nome="Larissa Manuela"
+        subtitulo="Achei mais ou menos"
+        comentario="prefiro o meu videclipe"
+      />
     </div>
   );
 }
