@@ -6,7 +6,8 @@ class Contador extends React.Component {
     super(props);
     this.state = {
       contador: 0,
-      visibilidade: true
+      visibilidade: true,
+      congelado: false
     };
   }
 
@@ -29,7 +30,8 @@ class Contador extends React.Component {
   resetar = () => {
     this.setState(() => {
       return {
-        contador: 0
+        contador: 0,
+        congelado: false
       }
     })
   }
@@ -42,23 +44,47 @@ class Contador extends React.Component {
     })
   }
 
+  congelarContador = () => {
+    this.setState(() => {
+      return {
+        congelado: true
+      }
+    })
+  }
+
   render() {
     return (
       <div>
         <p>{this.state.contador}</p>
 
-        <button onClick={this.alternarVisibilidade}>
-          {this.state.visibilidade === true ? "Fechar Contador" : "Abrir Contador"}
-        </button>
+        <div>
+          <button onClick={this.alternarVisibilidade}>
+            {this.state.visibilidade === true
+              ? "Fechar Contador"
+              : "Abrir Contador"}
+          </button>
+        </div>
 
-          {this.state.visibilidade && (
-            <div>
-              <button className="btnMaisUm" onClick={this.adicionarUm}>+1</button>
-              <button className="btnMenosUm" onClick={this.subtrairUm}>-1</button>
-              <button className="btnResetar" onClick={this.resetar}>resetar</button>
-            </div>
-          )}
+        {this.state.visibilidade && (
+          <div>
+            <button className="btnMaisUm" disabled={this.state.congelado} onClick={this.adicionarUm}>
+              +1
+            </button>
+            <button className="btnMenosUm" disabled={this.state.congelado} onClick={this.subtrairUm}>
+              -1
+            </button>
+            <button className="btnResetar" onClick={this.resetar}>
+              resetar
+            </button>
+          </div>
+        )}
 
+        {this.state.contador !== 0 && (
+          <div>
+            <button onClick={this.congelarContador}>Finalizar contador</button>
+          </div>
+        )}
+        
       </div>
     );
   }
